@@ -1,0 +1,48 @@
+body {
+    animation: colorChange 10s linear 0s infinite;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container h1 {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    animation: spin 5s linear 0s infinite both;
+    color: white;
+    text-align: center;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: rgb(185, 46, 46);
+    }
+
+    20% {
+        background-color: rgb(185, 111, 46);
+    }
+
+    40% {
+        background-color: rgb(46, 185, 95);
+    }
+
+    60% {
+        background-color: rgb(46, 71, 185);
+    }
+
+    80% {
+        background-color: rgb(120, 46, 185);
+    }
+
+    100% {
+        background-color: rgb(185, 46, 46);
+    }
+}
+
+@keyframes spin {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
