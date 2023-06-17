@@ -9,7 +9,7 @@ function createHeart() {
     heart.classList.add('hearts');
     document.body.appendChild(heart);
     console.log('Heart Created');
-    setTimeout(function () {heart.style.display = 'none';}, 2100);
+    setTimeout(function () {heart.style.display = 'none'; document.body.removeChild(heart);}, 2100);
 }
 
 const tip = document.querySelector('#tip');
