@@ -1,5 +1,8 @@
 body {
     animation: colorChange 10s linear 0s infinite;
+    overflow: hidden;
+    color: white;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
 }
 
 #container {
@@ -10,9 +13,7 @@ body {
 }
 
 #container h1 {
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
     animation: spin 5s linear 0s infinite both;
-    color: white;
     text-align: center;
 }
 
@@ -45,4 +46,27 @@ body {
 @keyframes spin {
     from {rotate: 0deg;}
     to {rotate: 360deg;}
+}
+
+#tip {
+    display: none;
+}
+
+.hearts {
+    position: absolute;
+    top: 110%;
+    animation: moveUp 2s linear 0s 1 forwards;
+    opacity: 75%;
+    z-index: -1;
+}
+
+@keyframes moveUp {
+    0% {
+        top: 93%;
+    }
+
+    100% {
+        top: -10%;
+        display: none;
+    }
 }
